@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import Image from "next/image";
 
 export default function Showcase() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -33,10 +34,13 @@ export default function Showcase() {
         <motion.div style={{ x }} className="flex gap-6 min-w-max">
           {items.map((item, i) => (
             <div key={i} className="w-[300px] md:w-[500px] flex flex-col gap-4">
-              <div className="aspect-[4/3] relative overflow-hidden bg-neutral-200">
-                <div 
-                  className="absolute inset-0 bg-cover bg-center grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105"
-                  style={{ backgroundImage: `url(${item.img})` }}
+              <div className="aspect-[4/3] relative overflow-hidden bg-neutral-200 group">
+                <Image
+                  src={item.img}
+                  alt={item.title}
+                  fill
+                  className="object-cover object-center grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
+                  sizes="(max-width: 768px) 300px, 500px"
                 />
               </div>
               <h3 className="text-sm font-bold tracking-widest uppercase text-foreground">{item.title}</h3>

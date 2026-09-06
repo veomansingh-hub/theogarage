@@ -23,7 +23,6 @@ export default function Navbar() {
     { name: "Vehicles", href: "/#vehicles" },
     { name: "About", href: "/about" },
     { name: "FAQ", href: "/#faq" },
-    { name: "Contact", href: "/book" },
   ];
 
   return (
@@ -47,17 +46,25 @@ export default function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              className="text-sm font-medium tracking-wide text-muted hover:text-foreground transition-colors uppercase"
+              className={`text-sm font-medium tracking-wide uppercase transition-colors ${isScrolled ? 'text-muted hover:text-foreground' : 'text-neutral-300 hover:text-white'}`}
             >
               {link.name}
             </Link>
           ))}
+          <a
+            href="https://www.theomedia.co.uk/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`text-sm font-medium tracking-wide uppercase transition-colors ${isScrolled ? 'text-muted hover:text-foreground' : 'text-neutral-300 hover:text-white'}`}
+          >
+            Contact TheoMedia
+          </a>
         </nav>
 
         <div className="hidden md:block">
           <Link
             href="/book"
-            className="bg-foreground text-white px-6 py-3 text-sm font-bold tracking-widest uppercase hover:bg-accent transition-colors"
+            className="bg-accent text-white px-6 py-3 text-sm font-bold tracking-widest uppercase hover:bg-white hover:text-black border border-transparent hover:border-border transition-colors"
           >
             Book a Service
           </Link>
@@ -65,7 +72,7 @@ export default function Navbar() {
 
         {/* Mobile Menu Toggle */}
         <button
-          className="md:hidden z-50 text-foreground"
+          className={`md:hidden z-50 ${isScrolled || mobileMenuOpen ? 'text-foreground' : 'text-white'}`}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle Menu"
         >
@@ -94,6 +101,15 @@ export default function Navbar() {
                   {link.name}
                 </Link>
               ))}
+              <a
+                href="https://www.theomedia.co.uk/"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMobileMenuOpen(false)}
+                className="text-2xl font-semibold tracking-wide text-foreground uppercase mt-4"
+              >
+                Contact TheoMedia
+              </a>
               <Link
                 href="/book"
                 onClick={() => setMobileMenuOpen(false)}

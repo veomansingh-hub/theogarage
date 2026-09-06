@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, CheckCircle2, ChevronRight, Settings, PenTool as Tool, BatteryCharging, Wind, CarFront, Check } from "lucide-react";
 import Vehicles from "@/components/Vehicles";
 import Showcase from "@/components/Showcase";
@@ -10,13 +11,21 @@ export default function Home() {
     <div className="flex flex-col w-full overflow-x-hidden">
       {/* HERO SECTION */}
       <section className="relative w-full h-[90vh] min-h-[700px] flex items-center justify-center bg-[#111] overflow-hidden">
-        <div className="absolute inset-0 w-full h-full">
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent z-10" />
-          <div className="absolute inset-0 bg-neutral-900 bg-[url('https://images.unsplash.com/photo-1580273916550-e323be2ae537?q=80&w=2940&auto=format&fit=crop')] bg-cover bg-center opacity-70 mix-blend-luminosity" />
+        <div className="absolute inset-0 w-full h-full z-0">
+          <Image
+            src="https://images.unsplash.com/photo-1617531653332-bd46c24f2068?q=80&w=2940&auto=format&fit=crop"
+            alt="Premium BMW in Workshop"
+            fill
+            priority
+            className="object-cover object-[75%_center] md:object-[center_center] opacity-70 mix-blend-luminosity"
+            sizes="100vw"
+            quality={90}
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/50 to-transparent z-10" />
         </div>
         
-        <div className="container relative z-20 mx-auto px-6 max-w-7xl mt-16">
-          <div className="max-w-3xl">
+        <div className="container relative z-20 mx-auto px-6 max-w-7xl mt-16 pointer-events-none">
+          <div className="max-w-3xl pointer-events-auto">
             <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tight uppercase leading-[0.95] mb-6">
               Your Car.<br />
               <span className="text-neutral-300">Looked After Properly.</span>
@@ -81,7 +90,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12">
             {[
-              { id: "01", slug: "servicing", title: "Servicing", desc: "Routine and manufacturer-schedule servicing designed to keep vehicles performing at their best.", icon: <Settings size={28} strokeWidth={1.5} /> },
+              { id: "01", slug: "servicing", title: "Servicing", desc: "Routine and manufacturer-scheduled servicing designed to keep vehicles performing at their best.", icon: <Settings size={28} strokeWidth={1.5} /> },
               { id: "02", slug: "mot-preparation", title: "MOT Preparation", desc: "Pre-MOT checks and repairs to help get vehicles ready for inspection.", icon: <Check size={28} strokeWidth={1.5} /> },
               { id: "03", slug: "diagnostics", title: "Diagnostics", desc: "Modern electronic diagnostics to identify faults accurately before unnecessary parts are replaced.", icon: <Tool size={28} strokeWidth={1.5} /> },
               { id: "04", slug: "brakes-suspension", title: "Brakes & Suspension", desc: "Inspection, repair and replacement of braking and suspension components.", icon: <CarFront size={28} strokeWidth={1.5} /> },
@@ -182,8 +191,14 @@ export default function Home() {
                 Read Our Story <ArrowRight size={16} />
               </Link>
             </div>
-            <div className="w-full lg:w-1/2 aspect-square md:aspect-[4/3] bg-neutral-200 relative overflow-hidden">
-              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1625047509168-a7006f815424?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center hover:scale-105 transition-transform duration-1000 grayscale hover:grayscale-0" />
+            <div className="w-full lg:w-1/2 aspect-square md:aspect-[4/3] bg-neutral-200 relative overflow-hidden group">
+              <Image
+                src="https://images.unsplash.com/photo-1625047509168-a7006f815424?q=80&w=2000&auto=format&fit=crop"
+                alt="Workshop Diagnostics"
+                fill
+                className="object-cover object-center group-hover:scale-105 transition-transform duration-1000 grayscale group-hover:grayscale-0"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
             </div>
           </div>
         </div>
@@ -244,7 +259,17 @@ export default function Home() {
 
       {/* FINAL CTA */}
       <section className="py-32 bg-[#111] text-white text-center relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1555626906-fcf10d6851b4?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center opacity-20 mix-blend-luminosity" />
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="https://images.unsplash.com/photo-1555626906-fcf10d6851b4?q=80&w=2000&auto=format&fit=crop"
+            alt="BMW Headlight"
+            fill
+            className="object-cover object-center opacity-20 mix-blend-luminosity"
+            sizes="100vw"
+            quality={80}
+            loading="lazy"
+          />
+        </div>
         <div className="container mx-auto px-6 max-w-7xl relative z-10">
           <h2 className="text-4xl md:text-6xl font-bold tracking-tight uppercase leading-none mb-8 max-w-4xl mx-auto">
             Your Car Deserves<br />Better Than Guesswork.
