@@ -11,7 +11,7 @@ const faqs = [
   },
   {
     question: "Can you service newer vehicles?",
-    answer: "Yes. We have access to manufacturer service schedules, digital service records, and modern diagnostic equipment. Servicing your new vehicle with us will not invalidate your manufacturer warranty."
+    answer: "Yes. Independent workshops use manufacturer service schedules and modern diagnostic equipment. Under Block Exemption regulations, independent servicing does not invalidate a manufacturer warranty when the correct parts and fluids are used."
   },
   {
     question: "Do you work on hybrid and electric cars?",
