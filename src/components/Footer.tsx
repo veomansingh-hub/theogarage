@@ -7,11 +7,16 @@ export default function Footer() {
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="md:col-span-2">
-            <span className="font-bold text-2xl tracking-widest uppercase block mb-6">
-              Theo <span className="text-accent">Garage</span>
-            </span>
+            <div className="mb-6">
+              <span className="font-bold text-2xl tracking-widest uppercase block leading-none">
+                Hartwell <span className="text-accent">Motorworks</span>
+              </span>
+              <span className="text-[10px] font-bold tracking-[0.25em] text-neutral-400 uppercase mt-1.5 block">
+                Independent Automotive
+              </span>
+            </div>
             <p className="text-neutral-400 max-w-sm mb-8 leading-relaxed">
-              Independent Automotive Care, Done Properly. Servicing, diagnostics and repairs from an independent workshop built around straightforward advice, skilled technicians and careful workmanship.
+              Contemporary independent automotive care. Servicing, diagnostics and repairs built around straightforward advice, skilled technicians and careful workmanship.
             </p>
             <Link
               href="/book"
@@ -64,10 +69,11 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-neutral-800 text-sm text-neutral-500">
-          <p className="mb-4 md:mb-0">Demonstration business — not a real automotive workshop.</p>
+        {/* Bottom Bar */}
+        <div className="pt-8 border-t border-neutral-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-neutral-500">
+          <p>© {new Date().getFullYear()} Hartwell Motorworks. All rights reserved.</p>
           <p>
-            <a href="https://www.theomedia.co.uk/" target="_blank" rel="noreferrer" className="text-white hover:text-accent font-bold tracking-widest uppercase transition-colors">
+            <a href="https://www.theomedia.co.uk/" target="_blank" rel="noreferrer" className="text-neutral-400 hover:text-white font-bold tracking-widest uppercase transition-colors">
               BUILT BY THEOMEDIA UK
             </a>
           </p>

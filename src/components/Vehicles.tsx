@@ -4,11 +4,11 @@ import Link from "next/link";
 export default function Vehicles() {
   const categories = [
     { name: "German", img: "https://images.unsplash.com/photo-1617531653332-bd46c24f2068?q=80&w=800&auto=format&fit=crop" },
-    { name: "British", img: "https://images.unsplash.com/photo-1606016159991-efa14b8bd641?q=80&w=800&auto=format&fit=crop" },
-    { name: "Japanese", img: "https://images.unsplash.com/photo-1611821064430-0d40221e4f98?q=80&w=800&auto=format&fit=crop" },
+    { name: "British", img: "https://images.unsplash.com/photo-1563720223185-11003d516935?q=80&w=800&auto=format&fit=crop" },
+    { name: "Japanese", img: "https://images.unsplash.com/photo-1617788138017-80ad40651399?q=80&w=800&auto=format&fit=crop" },
     { name: "Performance", img: "https://images.unsplash.com/photo-1580274455191-1c62238fa333?q=80&w=800&auto=format&fit=crop" },
     { name: "Hybrid & EV", img: "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?q=80&w=800&auto=format&fit=crop" },
-    { name: "Light Commercial", img: "https://images.unsplash.com/photo-1563124508-2e06f5287e07?q=80&w=800&auto=format&fit=crop" },
+    { name: "Light Commercial", img: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800&auto=format&fit=crop" },
   ];
 
   return (

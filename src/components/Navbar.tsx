@@ -30,14 +30,19 @@ export default function Navbar() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
           ? "bg-white/95 backdrop-blur-md shadow-sm py-4"
-          : "bg-transparent py-6"
+          : "bg-transparent py-5"
       }`}
     >
       <div className="container mx-auto px-6 max-w-7xl flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 z-50">
-          <span className="font-bold text-xl tracking-widest text-foreground uppercase">
-            Theo <span className="text-accent">Garage</span>
-          </span>
+          <div className="flex flex-col">
+            <span className={`font-bold text-base sm:text-xl tracking-widest uppercase leading-tight ${isScrolled ? 'text-foreground' : 'text-white'}`}>
+              Hartwell <span className="text-accent">Motorworks</span>
+            </span>
+            <span className={`text-[9px] font-bold tracking-[0.22em] uppercase ${isScrolled ? 'text-muted' : 'text-neutral-300'}`}>
+              Independent Automotive
+            </span>
+          </div>
         </Link>
 
         {/* Desktop Nav */}

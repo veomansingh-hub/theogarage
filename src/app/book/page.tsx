@@ -34,7 +34,7 @@ export default function BookPage() {
     setTimeout(() => {
       setIsSubmitting(false);
       setIsSuccess(true);
-    }, 1500);
+    }, 1200);
   };
 
   const steps = [
@@ -50,12 +50,12 @@ export default function BookPage() {
     return (
       <div className="pt-32 pb-32 min-h-[80vh] flex items-center justify-center bg-background">
         <div className="max-w-md text-center px-6">
-          <div className="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-8">
-            <CheckCircle2 size={40} />
+          <div className="w-20 h-20 bg-neutral-100 text-foreground border border-border rounded-full flex items-center justify-center mx-auto mb-8">
+            <CheckCircle2 size={40} className="text-accent" />
           </div>
-          <h1 className="text-3xl font-bold uppercase tracking-tight mb-4">Demo Booking Request Completed</h1>
+          <h1 className="text-3xl font-bold uppercase tracking-tight mb-4">Request Completed</h1>
           <p className="text-muted leading-relaxed mb-8">
-            Thank you, {formData.name}. We have received your booking request for your vehicle ({formData.reg.toUpperCase() || "Registration Not Provided"}). This is a demonstration flow — no real appointment has been made.
+            Thank you, {formData.name}. We have logged your request for vehicle ({formData.reg.toUpperCase() || "Registration Not Provided"}). A member of our team will contact you shortly to confirm your appointment.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link
@@ -70,7 +70,7 @@ export default function BookPage() {
               rel="noreferrer"
               className="bg-accent text-white px-8 py-4 text-sm font-bold tracking-widest uppercase hover:bg-black transition-colors"
             >
-              Talk to TheoMedia UK
+              BUILD SOMETHING LIKE THIS →
             </a>
           </div>
         </div>
@@ -86,7 +86,7 @@ export default function BookPage() {
             Book a Service
           </h1>
           <p className="text-muted text-lg">
-            Complete the form below to request an appointment. We will contact you to confirm details.
+            Complete the form below to request an appointment with Hartwell Motorworks. We will contact you to confirm details.
           </p>
         </div>
 

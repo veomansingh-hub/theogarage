@@ -14,7 +14,7 @@ export default function Home() {
         <div className="absolute inset-0 w-full h-full z-0">
           <Image
             src="https://images.unsplash.com/photo-1617531653332-bd46c24f2068?q=80&w=2940&auto=format&fit=crop"
-            alt="Premium BMW in Workshop"
+            alt="Hartwell Motorworks Workshop"
             fill
             priority
             className="object-cover object-[75%_center] md:object-[center_center] opacity-70 mix-blend-luminosity"
@@ -31,7 +31,7 @@ export default function Home() {
               <span className="text-neutral-300">Looked After Properly.</span>
             </h1>
             <p className="text-lg md:text-xl text-neutral-300 mb-10 max-w-xl leading-relaxed">
-              Servicing, diagnostics and repairs from an independent workshop built around straightforward advice, skilled technicians and careful workmanship.
+              Servicing, diagnostics and maintenance from an independent workshop built around straightforward advice, skilled technicians and meticulous workmanship.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
               <Link
@@ -67,7 +67,7 @@ export default function Home() {
               "Qualified Technicians",
               "Quality Parts",
               "Clear Pricing",
-              "Warranty on Work"
+              "Meticulous Workmanship"
             ].map((trust, i) => (
               <div key={i} className="flex items-center justify-center md:justify-start gap-3 text-sm font-semibold tracking-wide uppercase text-foreground">
                 <CheckCircle2 size={16} className="text-accent shrink-0" />
@@ -144,10 +144,10 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
             {[
               { title: "No Unnecessary Work", desc: "We explain what needs attention, what can wait and why." },
-              { title: "Skilled Technicians", desc: "Modern diagnostic equipment combined with practical experience." },
-              { title: "Quality Components", desc: "Parts selected for reliability rather than simply the cheapest option." },
+              { title: "Skilled Technicians", desc: "Modern diagnostic equipment combined with practical workshop experience." },
+              { title: "Quality Components", desc: "Parts selected for reliability and longevity rather than simply the cheapest option." },
               { title: "Clear Communication", desc: "Customers know what is happening before additional work is undertaken." },
-              { title: "Built Around Trust", desc: "The aim is a workshop customers are comfortable returning to." }
+              { title: "Built Around Trust", desc: "A workshop built for long-term relationships and clear advice." }
             ].map((point, i) => (
               <div key={i} className="border-l-2 border-accent pl-6">
                 <h3 className="text-xl font-bold uppercase tracking-wide mb-3">{point.title}</h3>
@@ -163,7 +163,7 @@ export default function Home() {
         <div className="container mx-auto px-6 max-w-7xl mb-16">
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight uppercase leading-none text-center">
             From Daily Drivers<br />
-            <span className="text-muted">To Something Special.</span>
+            <span className="text-muted">To Performance Models.</span>
           </h2>
         </div>
         <div className="container mx-auto px-6 max-w-7xl">
@@ -181,10 +181,10 @@ export default function Home() {
               </h2>
               <div className="space-y-6 text-lg text-muted">
                 <p>
-                  Theo Garage was created around a simple idea: independent garages can combine personal service with the standards, equipment and attention to detail expected from modern automotive workshops.
+                  Hartwell Motorworks was established around a simple principle: independent automotive workshops can combine straightforward service with the standards, diagnostics and care expected from contemporary vehicle specialists.
                 </p>
                 <p>
-                  We believe good vehicle care starts with good communication. Diagnose properly, explain clearly and do the work properly.
+                  We believe good vehicle care starts with good communication — diagnose properly, explain clearly, and execute the work with precision.
                 </p>
               </div>
               <Link href="/about" className="inline-flex items-center gap-2 mt-10 text-sm font-bold tracking-widest uppercase text-foreground hover:text-accent transition-colors pb-1 border-b-2 border-foreground hover:border-accent">
@@ -193,8 +193,8 @@ export default function Home() {
             </div>
             <div className="w-full lg:w-1/2 aspect-square md:aspect-[4/3] bg-neutral-200 relative overflow-hidden group">
               <Image
-                src="https://images.unsplash.com/photo-1625047509168-a7006f815424?q=80&w=2000&auto=format&fit=crop"
-                alt="Workshop Diagnostics"
+                src="https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?q=80&w=2000&auto=format&fit=crop"
+                alt="Hartwell Motorworks Workshop Diagnostics"
                 fill
                 className="object-cover object-center group-hover:scale-105 transition-transform duration-1000 grayscale group-hover:grayscale-0"
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -230,15 +230,15 @@ export default function Home() {
       {/* SHOWCASE */}
       <Showcase />
 
-      {/* REVIEWS SECTION */}
+      {/* REVIEWS INTEGRATION PREVIEW SECTION */}
       <section className="py-32 bg-white border-y border-border">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight uppercase leading-none mb-6">
-              What Great Garage Service<br />Should Feel Like.
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight uppercase leading-none mb-4">
+              Review Integration<br />Preview
             </h2>
-            <p className="text-sm text-muted uppercase tracking-widest">
-              Sample customer-feedback presentation for demo purposes.
+            <p className="text-xs text-muted uppercase tracking-widest max-w-lg mx-auto">
+              Demonstrating live Google Business Profile and platform review feed integration for client websites.
             </p>
           </div>
           <Reviews />

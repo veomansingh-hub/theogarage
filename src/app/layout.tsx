@@ -20,48 +20,48 @@ const SITE_URL = "https://theo-garage.vercel.app";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Theo Garage | Premium Independent Garage",
-    template: "%s | Theo Garage",
+    default: "Hartwell Motorworks | Independent Automotive",
+    template: "%s | Hartwell Motorworks",
   },
   description:
-    "Servicing, diagnostics, MOT preparation and specialist repairs from a premium independent workshop. Straightforward advice, skilled technicians, careful workmanship.",
+    "A contemporary independent automotive experience focused on servicing, diagnostics, maintenance and meticulous vehicle care.",
   keywords: [
-    "independent garage",
+    "Hartwell Motorworks",
+    "independent automotive",
     "car servicing",
     "MOT preparation",
     "diagnostics",
     "brake repair",
     "hybrid EV service",
-    "premium garage",
-    "Theo Garage",
+    "vehicle maintenance",
   ],
   openGraph: {
     type: "website",
-    siteName: "Theo Garage",
-    title: "Theo Garage | Premium Independent Garage",
+    siteName: "Hartwell Motorworks",
+    title: "Hartwell Motorworks | Independent Automotive",
     description:
-      "Servicing, diagnostics, MOT preparation and specialist repairs from a premium independent workshop.",
+      "A contemporary independent automotive experience focused on servicing, diagnostics, maintenance and meticulous vehicle care.",
     url: SITE_URL,
     images: [
       {
         url: "https://images.unsplash.com/photo-1617531653332-bd46c24f2068?q=80&w=1200&auto=format&fit=crop",
         width: 1200,
         height: 630,
-        alt: "Theo Garage — Premium Independent Workshop",
+        alt: "Hartwell Motorworks — Independent Automotive",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Theo Garage | Premium Independent Garage",
+    title: "Hartwell Motorworks | Independent Automotive",
     description:
-      "Servicing, diagnostics, MOT preparation and specialist repairs from a premium independent workshop.",
+      "A contemporary independent automotive experience focused on servicing, diagnostics, maintenance and meticulous vehicle care.",
     images: [
       "https://images.unsplash.com/photo-1617531653332-bd46c24f2068?q=80&w=1200&auto=format&fit=crop",
     ],
   },
   robots: {
-    index: false, // Demo site — keep out of search engines
+    index: false,
     follow: false,
   },
 };

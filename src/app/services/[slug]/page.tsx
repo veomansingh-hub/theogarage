@@ -149,7 +149,7 @@ const servicesData: Record<
     description:
       "Modern electronic diagnostics to find the true cause of a fault before any parts are replaced.",
     heroImg:
-      "https://images.unsplash.com/photo-1625047509168-a7006f815424?q=80&w=2000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?q=80&w=2000&auto=format&fit=crop",
     heroPosition: "center 60%",
     storyImg:
       "https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?q=80&w=1200&auto=format&fit=crop",
@@ -364,7 +364,7 @@ const servicesData: Record<
     description:
       "Scheduled servicing, compliance and maintenance management for business vehicles.",
     heroImg:
-      "https://images.unsplash.com/photo-1563124508-2e06f5287e07?q=80&w=2000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2000&auto=format&fit=crop",
     heroPosition: "center center",
     storyImg:
       "https://images.unsplash.com/photo-1621213278964-b7784fb7fb5e?q=80&w=1200&auto=format&fit=crop",
@@ -412,9 +412,9 @@ export async function generateMetadata({
 }) {
   const { slug } = await params;
   const service = servicesData[slug];
-  if (!service) return { title: "Service Not Found | Theo Garage" };
+  if (!service) return { title: "Service Not Found | Hartwell Motorworks" };
   return {
-    title: `${service.title} | Theo Garage`,
+    title: `${service.title} | Hartwell Motorworks`,
     description: service.description,
   };
 }
@@ -451,7 +451,7 @@ export default async function ServicePage({
         <div className="container relative z-20 mx-auto px-6 max-w-7xl pt-20">
           <div className="max-w-2xl">
             <p className="text-xs font-bold tracking-widest uppercase text-accent mb-4">
-              Theo Garage
+              Hartwell Motorworks
             </p>
             <h1 className="text-4xl md:text-6xl font-bold text-white tracking-tight uppercase leading-none mb-5">
               {service.title}

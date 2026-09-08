@@ -3,9 +3,9 @@ import Image from "next/image";
 import { CheckCircle2 } from "lucide-react";
 
 export const metadata = {
-  title: "About | Theo Garage",
+  title: "About | Hartwell Motorworks",
   description:
-    "Learn about Theo Garage's independent workshop philosophy — dealer-level diagnostics, skilled craftsmanship, and transparent communication.",
+    "Learn about Hartwell Motorworks' independent workshop philosophy — dealer-level diagnostics, skilled craftsmanship, and transparent communication.",
 };
 
 const values = [
@@ -15,7 +15,7 @@ const values = [
   },
   {
     title: "Modern Diagnostics & Craftsmanship",
-    body: "The modern motor vehicle is a complex network of computers and sensors. We invest heavily in dealer-level diagnostic equipment and continuous training. But we also believe in fundamental mechanical skill — the ability to physically inspect components, understand how they fail, and repair them properly rather than fitting unnecessary new parts.",
+    body: "The modern motor vehicle is a complex network of computers and sensors. We invest in modern diagnostic equipment and continuous training. But we also believe in fundamental mechanical skill — the ability to physically inspect components, understand how they fail, and repair them properly rather than fitting unnecessary new parts.",
   },
   {
     title: "Transparent Communication",
@@ -30,13 +30,13 @@ export default function AboutPage() {
       <section className="pt-32 pb-20 bg-background">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="max-w-3xl">
-            <p className="text-xs font-bold tracking-widest uppercase text-accent mb-4">About Theo Garage</p>
+            <p className="text-xs font-bold tracking-widest uppercase text-accent mb-4">About Hartwell Motorworks</p>
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight uppercase leading-[0.95] mb-6">
               A Better Way To<br />
               <span className="text-muted">Maintain Your Vehicle.</span>
             </h1>
             <p className="text-xl text-muted leading-relaxed">
-              Theo Garage was established to provide a genuine alternative to the main dealer network — an independent workshop combining traditional mechanical craftsmanship with modern diagnostic capability.
+              Hartwell Motorworks was established to provide a genuine alternative to the main dealer network — an independent workshop combining traditional mechanical craftsmanship with modern diagnostic capability.
             </p>
           </div>
         </div>
@@ -50,7 +50,7 @@ export default function AboutPage() {
             <div className="aspect-[4/5] bg-neutral-200 relative overflow-hidden group sticky top-24">
               <Image
                 src="https://images.unsplash.com/photo-1503375894024-783262fb0eb2?q=80&w=1200&auto=format&fit=crop"
-                alt="Workshop technician at work"
+                alt="Hartwell Motorworks technician at work"
                 fill
                 className="object-cover object-center grayscale group-hover:grayscale-0 transition-all duration-700"
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -72,10 +72,10 @@ export default function AboutPage() {
                 <ul className="space-y-3">
                   {[
                     "No work carried out without your prior authorisation",
-                    "Itemised estimates before every job",
-                    "OEM-quality parts as standard",
-                    "Dealer-level diagnostics at independent prices",
-                    "Digital service records updated correctly",
+                    "Itemised estimates before work begins",
+                    "Quality components fitted as standard",
+                    "Comprehensive diagnostic health checks",
+                    "Service records updated correctly",
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-3 text-muted">
                       <CheckCircle2 size={18} className="text-accent shrink-0 mt-0.5" />
