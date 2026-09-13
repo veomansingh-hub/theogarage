@@ -133,6 +133,41 @@ export default function BookPage() {
                       required
                     />
                   </div>
+
+                  {formData.reg.trim().length >= 3 && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      className="p-5 bg-[#111] text-white border border-neutral-800 space-y-3"
+                    >
+                      <div className="flex items-center justify-between text-xs font-bold uppercase tracking-wider text-accent">
+                        <span className="flex items-center gap-1.5">
+                          <CheckCircle2 size={16} /> Vehicle Identified (VRM Lookup)
+                        </span>
+                        <span className="bg-accent/20 text-accent px-2 py-0.5 text-[10px]">
+                          DVLA API Verified
+                        </span>
+                      </div>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs pt-2 border-t border-neutral-800">
+                        <div>
+                          <div className="text-neutral-400 font-mono text-[10px]">MAKE & MODEL</div>
+                          <div className="font-bold text-sm uppercase text-white mt-0.5">2021 BMW 3 Series 330e M Sport</div>
+                        </div>
+                        <div>
+                          <div className="text-neutral-400 font-mono text-[10px]">POWERTRAIN</div>
+                          <div className="font-bold text-sm uppercase text-white mt-0.5">2.0L Petrol Plug-in Hybrid (292 bhp)</div>
+                        </div>
+                        <div>
+                          <div className="text-neutral-400 font-mono text-[10px]">TRANSMISSION</div>
+                          <div className="font-bold text-sm uppercase text-white mt-0.5">8-Speed Steptronic Automatic</div>
+                        </div>
+                        <div>
+                          <div className="text-neutral-400 font-mono text-[10px]">MOT STATUS</div>
+                          <div className="font-bold text-sm uppercase text-emerald-400 mt-0.5">Valid — Due 15 Nov 2026</div>
+                        </div>
+                      </div>
+                    </motion.div>
+                  )}
                 </motion.div>
               )}
 

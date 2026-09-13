@@ -5,6 +5,8 @@ import Vehicles from "@/components/Vehicles";
 import Showcase from "@/components/Showcase";
 import Reviews from "@/components/Reviews";
 import FAQ from "@/components/FAQ";
+import ServiceCalculator from "@/components/ServiceCalculator";
+import Capabilities from "@/components/Capabilities";
 
 export default function Home() {
   return (
@@ -26,6 +28,10 @@ export default function Home() {
         
         <div className="container relative z-20 mx-auto px-6 max-w-7xl mt-16 pointer-events-none">
           <div className="max-w-3xl pointer-events-auto">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-accent/20 border border-accent/40 text-white text-xs font-bold tracking-widest uppercase mb-6 backdrop-blur-sm">
+              <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
+              Independent Automotive Workshop
+            </div>
             <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tight uppercase leading-[0.95] mb-6">
               Your Car.<br />
               <span className="text-neutral-300">Looked After Properly.</span>
@@ -47,7 +53,7 @@ export default function Home() {
                 Explore Services <ArrowRight size={16} />
               </Link>
             </div>
-            <div className="flex flex-wrap items-center gap-4 text-sm font-medium text-neutral-400 tracking-wide uppercase">
+            <div className="flex flex-wrap items-center gap-4 text-xs sm:text-sm font-medium text-neutral-400 tracking-wide uppercase">
               <span>Clear advice</span>
               <span className="hidden sm:block w-1 h-1 bg-accent rounded-full" />
               <span>Quality parts</span>
@@ -115,28 +121,31 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CONVERSION SECTION */}
-      <section className="py-32 bg-[#111] text-white">
-        <div className="container mx-auto px-6 max-w-7xl text-center">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-4xl md:text-6xl font-bold tracking-tight uppercase leading-none mb-8">
-              Not sure what your car needs?
+      {/* SERVICE CALCULATOR WIDGET */}
+      <section className="py-20 bg-background border-t border-border">
+        <div className="container mx-auto px-6 max-w-7xl">
+          <ServiceCalculator />
+        </div>
+      </section>
+
+      {/* WORKSHOP CAPABILITIES & TECHNICAL STANDARDS */}
+      <section className="py-32 bg-white border-t border-border">
+        <div className="container mx-auto px-6 max-w-7xl">
+          <div className="mb-20 text-center max-w-3xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight uppercase leading-none mb-6">
+              Engineering Standards.<br />
+              <span className="text-muted">Dealer-Level Equipment.</span>
             </h2>
-            <p className="text-xl text-neutral-400 mb-12">
-              Tell us what you're experiencing and we'll help determine the right next step.
+            <p className="text-muted text-base md:text-lg">
+              Combining modern diagnostic telemetry, precision tools, and traditional mechanical craftsmanship.
             </p>
-            <Link
-              href="/book"
-              className="inline-block bg-accent text-white px-10 py-5 text-sm font-bold tracking-widest uppercase hover:bg-white hover:text-black transition-colors"
-            >
-              Tell Us What's Wrong
-            </Link>
           </div>
+          <Capabilities />
         </div>
       </section>
 
       {/* WHY CHOOSE US */}
-      <section id="why-us" className="py-32 bg-white">
+      <section id="why-us" className="py-32 bg-background border-t border-border">
         <div className="container mx-auto px-6 max-w-7xl">
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight uppercase leading-none mb-20 text-center">
             Straightforward<br />Automotive Care.
@@ -159,7 +168,7 @@ export default function Home() {
       </section>
 
       {/* VEHICLES SECTION */}
-      <section id="vehicles" className="py-32 bg-background border-t border-border">
+      <section id="vehicles" className="py-32 bg-white border-t border-border">
         <div className="container mx-auto px-6 max-w-7xl mb-16">
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight uppercase leading-none text-center">
             From Daily Drivers<br />
@@ -172,7 +181,7 @@ export default function Home() {
       </section>
 
       {/* WORKSHOP STORY (Split Screen) */}
-      <section className="py-24 bg-white border-t border-border">
+      <section className="py-24 bg-background border-t border-border">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="flex flex-col lg:flex-row items-center gap-16">
             <div className="w-full lg:w-1/2">
@@ -205,7 +214,7 @@ export default function Home() {
       </section>
 
       {/* PROCESS */}
-      <section className="py-32 bg-background">
+      <section className="py-32 bg-white border-t border-border">
         <div className="container mx-auto px-6 max-w-7xl text-center">
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight uppercase leading-none mb-20">
             Service Without<br />The Guesswork.
