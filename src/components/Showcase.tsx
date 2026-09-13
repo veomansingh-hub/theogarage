@@ -18,7 +18,7 @@ export default function Showcase() {
     { title: "Diagnostic Work", img: "https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?q=80&w=1200&auto=format&fit=crop" },
     { title: "Suspension Replacement", img: "https://images.unsplash.com/photo-1536700503339-1e4b06520771?q=80&w=1200&auto=format&fit=crop" },
     { title: "Routine Servicing", img: "https://images.unsplash.com/photo-1613214149922-f1809c99b414?q=80&w=1200&auto=format&fit=crop" },
-    { title: "Engine Inspection", img: "https://images.unsplash.com/photo-1523983388277-336a66bf9bc1?q=80&w=1200&auto=format&fit=crop" },
+    { title: "Engine Inspection", img: "https://images.unsplash.com/photo-1598972583804-98448eb583ff?q=80&w=1200&auto=format&fit=crop" },
   ];
 
   return (
